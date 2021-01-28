@@ -1,20 +1,44 @@
 import React from 'react';
+import './table.styles.css';
+import axios from 'axios';
 
-const MenuTable = ({cat}) => {
- 
+const MenuTable = ({menuData}) => {
+    console.log(menuData);
     return(<div>
-        <table>
+    
+    
+    {menuData.map(category =>{
+
+       return(
+        <table className="table custom-table">
+        <thead>
             <tr>
-                <th>Item Name</th>
-                <th>Item Id</th>
-                <th>Item Price</th>
-                <th>{cat}</th>
+                <th>{category.name.toUpperCase()}</th>
             </tr>
             <tr>
-            <td></td>
-            {/* // MAP THROUGH PROPS/DATA and place in <td></td> */}
-            </tr>   
-        </table>
+                <th>Item</th>
+                <th>Price</th>
+                <th>Ingredients</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {category.items.map(item =>{
+               
+                return(
+                    <tr>
+                        <td>{item.name}</td>
+                        <td>${item.price}</td>
+                        <td>{item.ingredients.join(", ")}</td>
+                        <td><button>delete</button></td>
+                    </tr>
+                )
+            })}
+        </tbody>
+        </table>        
+       )
+       
+    })}      
     </div>)
 }
 

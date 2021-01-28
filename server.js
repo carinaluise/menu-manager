@@ -1,58 +1,30 @@
-const { ObjectID } = require('bson');
+
 const express = require('express');
 const mongoose = require("mongoose");
 const app = express();
 const PORT = process.env.PORT || 5000;
+const bodyParser = require('body-parser')
 const cors = require('cors');
 
-
 require('dotenv').config()
+
 app.use(cors());
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
+
+//CONNECT TO ROUTER
+const menuRoute = require('./routes/menu');
+app.use('/menu', menuRoute)
 
 //CONNECT TO MONGODB
+
 mongoose.connect(`mongodb+srv://carinaluise:${process.env.MONGODB_PASSWORD}@cluster0.pocnj.mongodb.net/menuManager?retryWrites=true&w=majority`, {
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
+  useNewUrlParser:true
 })
-
-mongoose.set("useCreateIndex", true);
-const Schema = mongoose.Schema;
-
-// SET SCHEMAS AND MODELS
-const itemsSchema = new Schema({
-    _id: ObjectID,
-    name: String,
-    ingredients: Array,
-    price: Number
-})
-
-const categoriesSchema = new Schema({
-    _id: ObjectID,
-    name: String,
-    items: [itemsSchema]
-});
-
-const Item = mongoose.model("Item", itemsSchema)
-const Category = mongoose.model("Category", categoriesSchema)
-
-app.route("/api")
-    .get(function(req,res){
-
-        Category.find({}, function(err, foundCategories){
-            if(err){
-                console.log(err)
-            } else{
-                res.send(foundCategories);
-            }
-        })
-})
-
-
-
-
-
-
-
-
+.then(res => console.log("MongoDB connected"))
+.catch(err => console.log(err));
 
 
 

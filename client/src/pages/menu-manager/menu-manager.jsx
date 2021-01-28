@@ -7,7 +7,7 @@ class MenuManagerPage extends React.Component {
     constructor(){
         super()
         this.state={
-            categories: "",
+            menuData: [],
             
 
         }
@@ -16,10 +16,9 @@ class MenuManagerPage extends React.Component {
     componentDidMount(){
 
         axios
-            .get('/api')
+            .get('/menu')
             .then(res => {
-                console.log(res.data)
-                this.setState({categories: res.data[0].name})
+                this.setState({menuData: res.data})
                 
             })
             .catch(err =>{
@@ -28,10 +27,11 @@ class MenuManagerPage extends React.Component {
     }
 
     render(){
-        console.log(this.state.categories)
+       const {menuData} = this.state;
+       
     return(<div>
     
-    <MenuTable cat={this.state.categories}></MenuTable>
+    <MenuTable menuData={menuData}></MenuTable>
     
     
     
