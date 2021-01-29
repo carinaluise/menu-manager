@@ -14,8 +14,15 @@ app.use(bodyParser.urlencoded({
 }));
 
 //CONNECT TO ROUTER
-const menuRoute = require('./routes/menu');
-app.use('/menu', menuRoute)
+const mainsRoute = require('./routes/mains');
+app.use('/mains', mainsRoute)
+
+const startersRoute = require('./routes/starters');
+app.use('/starters', startersRoute)
+
+const drinksRoute = require('./routes/drinks');
+app.use('/drinks', drinksRoute)
+
 
 //CONNECT TO MONGODB
 
