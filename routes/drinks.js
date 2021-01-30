@@ -31,7 +31,7 @@ router.post('/', async(req,res)=>{
 
 router.delete('/:drinkId', async(req,res)=>{
     try{
-        const removedDrink = await Drink.remove({_id: req.params.drinkId})
+        const removedDrink = await Drink.deleteOne({_id: req.params.drinkId})
         res.json({message: `${removedDrink} deleted`})
 
     } catch (err){

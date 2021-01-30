@@ -1,0 +1,21 @@
+#navigation{
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5vh 0 10vh;
+    z-index: +10;
+ 
+
+
+}
+
+a {
+    color: white;
+    text-decoration: underline pink 4px;
+    
+}
+
+a:hover{
+    color: pink;
+    text-decoration: none;
+}

@@ -31,7 +31,7 @@ router.post('/', async(req,res)=>{
 
 router.delete('/:starterId', async(req,res)=>{
     try{
-        const removedStarter = await Starter.remove({_id: req.params.starterId})
+        const removedStarter = await Starter.deleteOne({_id: req.params.starterId})
         res.json({message: `${removedStarter} deleted`})
 
     } catch (err){

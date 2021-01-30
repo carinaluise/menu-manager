@@ -7,10 +7,15 @@ class MenuTable extends React.Component{
     constructor(){
         super()
         this.state ={
+            name: "",
+            price: 0,
+            description: ""
 
         }
         this.handleDelete = this.handleDelete.bind(this);
         this.handleUpdate = this.handleUpdate.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
 
@@ -34,22 +39,37 @@ class MenuTable extends React.Component{
         })
     }
 
-    // handleAdd(){
-    //     window.prompt("Item name", "Price", "Description");
-    //     // axios.post(`/${this.props.url}`, Data)
-    //     // .then(res => {
-    //     //     console.log(res)
-    //     // })
-    //     // .catch(err =>{
-    //     //     console.log(err)
-    //     // })
-    // }
+    handleChange = (event) => this.setState({
+        [event.target.name]: event.target.value
+    });
+
+    handleSubmit = (event)=> {
+        event.preventDefault();
+
+        const {name, price, description} = this.state;
+        const data ={
+            name,
+            price,
+            description
+        };
+
+        axios
+             axios.post(`/${this.props.url}`, data)
+                .then(res => {
+                    console.log(res)
+                })
+                .catch(err =>{
+                    console.log(err)
+                })
+        }
     
 
 
     render(){
 
     const {category , items} = this.props;
+    const {name, price, description} = this.state;
+
     return(
             <div>
                 <table className="table custom-table">
@@ -61,6 +81,7 @@ class MenuTable extends React.Component{
                             <th>Item</th>
                             <th>Price</th>
                             {category != "Drinks" ? <th>Description</th> : <th></th>}
+                            <th>Picture</th>
                           
                             
                         </tr>
@@ -71,20 +92,28 @@ class MenuTable extends React.Component{
                         return(
                             <tr>
                             <td>{item.name}</td>
-                            <td>${item.price}</td>
+                            <td>${item.price.toFixed(2)}</td>
                             <td>{item.description}</td>
+                            <td></td>
                             <td><button onClick={() => this.handleDelete(Id)}>delete</button></td>
                             <td><button onClick={() => this.handleUpdate(Id, Data)}>update</button></td>
         
                         </tr>
                         )
-                    })}
-                    <tr></tr>
-                    <td><button onClick={this.handleAdd}> + Add new Item</button></td>
-
-                    
+                    })} 
                     </tbody>
                 </table>
+
+                
+                <form onSubmit={this.handleSubmit}>
+                <input type="text" name="name" value={name} onChange={this.handleChange}></input>
+                <input type="text" name="price" value={price} onChange={this.handleChange}></input>
+                <input type="text" name="description" value={description} onChange={this.handleChange}></input>
+              
+                <td><button type="submit"> + Add new Item</button></td>
+                </form>
+
+
             </div>
         )
     }

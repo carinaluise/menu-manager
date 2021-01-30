@@ -1,0 +1,64 @@
+#sides{
+    height: 100vh;
+    color: white;
+}
+
+
+
+.row-container{
+ display: flex;
+}
+
+.column-left{
+ flex: 50%;
+ height: 90vh;
+}
+
+.column-right{
+    flex: 50%;
+    height: 90vh;
+}
+
+
+
+#sides h4{
+    font-size: 3rem;
+    width: 40vw;
+    border-bottom: solid pink 0.1rem;
+    padding-bottom: 10px;
+    margin-left: 10vw;
+}
+
+h5{
+    font-weight: bold;
+    
+}
+
+
+#sides p{
+    font-size: 1.2rem;
+    font-weight: lighter;
+    
+}
+
+#sides .info-container{
+    margin-left: 10vw;
+    display: flex;
+    width: 40vw;
+    padding-top: 50px;
+    flex-wrap: wrap;
+
+}
+
+#sides .description{
+    margin-left: 10vw;
+}
+
+
+.price{
+    
+   padding-top: 5px;
+   font-weight: lighter;
+    
+}
+

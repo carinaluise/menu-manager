@@ -1,5 +1,6 @@
 import React from 'react';
 import {Route} from 'react-router-dom';
+import './App.styles.css'
 
 import LandingPage from './pages/landing/landing';
 import MenuPage from './pages/menu/menu';

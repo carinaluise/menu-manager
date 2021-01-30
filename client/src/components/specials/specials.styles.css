@@ -1,0 +1,52 @@
+#specials{
+    height: 100vh;
+    color: white;
+}
+
+.row-container{
+ display: flex;
+}
+
+.column-left{
+ flex: 50%;
+ height: 90vh;
+}
+
+.column-right{
+    flex: 50%;
+    height: 90vh;
+}
+
+
+
+h4{
+    font-size: 3rem;
+    width: 40vw;
+    border-bottom: solid pink 0.1rem;
+    padding-bottom: 10px;
+}
+
+h5{
+    font-weight: bold;
+}
+
+
+#specials p{
+    font-size: 1.2rem;
+    font-weight: lighter;
+}
+
+.info-container{
+    display: flex;
+    width: 40vw;
+    padding-top: 50px;
+    flex-direction: column;
+   
+}
+
+
+.price{
+   padding-top: 5px;
+   font-weight: lighter;
+    
+}

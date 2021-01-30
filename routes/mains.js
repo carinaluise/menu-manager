@@ -31,7 +31,7 @@ router.post('/', async(req,res)=>{
 
 router.delete('/:mainId', async(req,res)=>{
     try{
-        const removedMain = await Main.remove({_id: req.params.mainId})
+        const removedMain = await Main.deleteOne({_id: req.params.mainId})
         res.json({message: `${removedMain} deleted`})
 
     } catch (err){
