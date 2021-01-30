@@ -33,6 +33,9 @@ app.use('/desserts', dessertsRoute)
 const specialsRoute = require('./routes/specials');
 app.use('/specials', specialsRoute)
 
+const usersRoute = require('./routes/users');
+app.use('/users', usersRoute)
+
 
 //CONNECT TO MONGODB
 

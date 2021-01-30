@@ -9,15 +9,17 @@ class MenuTable extends React.Component{
         this.state ={
             name: "",
             price: 0,
-            description: ""
-
+            description: "",
+            update: false
         }
+
+       
+       
         this.handleDelete = this.handleDelete.bind(this);
-        this.handleUpdate = this.handleUpdate.bind(this);
+        // this.handleUpdate = this.handleUpdate.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
-
 
   handleDelete(Id){
     axios.delete(`/${this.props.url}/${Id}`)
@@ -29,15 +31,15 @@ class MenuTable extends React.Component{
     })
     }
 
-    handleUpdate(Id, Data){
-        axios.patch(`/${this.props.url}/${Id}`, Data)
-        .then(res => {
-            console.log(res)
-        })
-        .catch(err =>{
-            console.log(err)
-        })
-    }
+    // handleUpdate(Id, Data){
+    //     axios.patch(`/${this.props.url}/${Id}`, Data)
+    //     .then(res => {
+    //         console.log(res)
+    //     })
+    //     .catch(err =>{
+    //         console.log(err)
+    //     })
+    // }
 
     handleChange = (event) => this.setState({
         [event.target.name]: event.target.value
@@ -56,7 +58,7 @@ class MenuTable extends React.Component{
         axios
              axios.post(`/${this.props.url}`, data)
                 .then(res => {
-                    console.log(res)
+                    this.setState({update: true})
                 })
                 .catch(err =>{
                     console.log(err)
@@ -68,11 +70,12 @@ class MenuTable extends React.Component{
     render(){
 
     const {category , items} = this.props;
-    const {name, price, description} = this.state;
+    const {name, price, description, update} = this.state;
 
     return(
             <div>
                 <table className="table custom-table">
+                {update ? <tr>Updated!</tr> : null}
                     <thead>
                         <tr>
                             <th>{category.toUpperCase()}</th>
@@ -87,18 +90,17 @@ class MenuTable extends React.Component{
                         </tr>
                     </thead>
                     <tbody>
-                    {items.map(item=>{
+                    {items.map((item)=>{
                       const Id = item._id;
                         return(
                             <tr>
-                            <td>{item.name}</td>
-                            <td>${item.price.toFixed(2)}</td>
-                            <td>{item.description}</td>
+                            <td >{item.name}</td>
+                            <td >{item.price.toFixed(2)}</td>
+                            <td >{item.description}</td>
                             <td></td>
                             <td><button onClick={() => this.handleDelete(Id)}>delete</button></td>
-                            <td><button onClick={() => this.handleUpdate(Id, Data)}>update</button></td>
-        
-                        </tr>
+                            {/* <td><button onClick={() => this.handleUpdate(Id, Data)}>update</button></td> */}
+                            </tr>
                         )
                     })} 
                     </tbody>
@@ -110,7 +112,7 @@ class MenuTable extends React.Component{
                 <input type="text" name="price" value={price} onChange={this.handleChange}></input>
                 <input type="text" name="description" value={description} onChange={this.handleChange}></input>
               
-                <td><button type="submit"> + Add new Item</button></td>
+                <button type="submit"> + Add new Item</button>
                 </form>
 
 
