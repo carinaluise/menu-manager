@@ -7,6 +7,8 @@ import Sides from '../../components/sides/sides';
 import Desserts from '../../components/desserts/desserts';
 import Specials from '../../components/specials/specials';
 import axios from 'axios';
+import HeaderNavigation from '../../components/header-navigation/header-navigation';
+import MenuNavigation from '../../components/menu-navigation/menu-navigation';
 
 import './menu.styles.css';
 
@@ -46,20 +48,15 @@ class MenuPage extends React.Component{
     render(){
     return(<div id="menu-page">
         
+        <HeaderNavigation></HeaderNavigation>
         <MenuOpening></MenuOpening>
+        <MenuNavigation></MenuNavigation>
         <Starters menu={this.state}></Starters>
         <Mains menu={this.state}></Mains>
+        <Sides menu={this.state}></Sides>
         <Drinks menu={this.state}></Drinks>
-        {this.state.sides.length > 0 ? <Sides menu={this.state}></Sides> : null}
         {this.state.specials.length > 0 ? <Specials menu={this.state}></Specials> : null}
-        {this.state.desserts.length > 0 ? <Desserts menu={this.state}></Desserts> : null}
-
-    
-        
-        
-        
-        
-        
+        {this.state.desserts.length > 0 ? <Desserts menu={this.state}></Desserts> : null} 
         </div>
         )
 

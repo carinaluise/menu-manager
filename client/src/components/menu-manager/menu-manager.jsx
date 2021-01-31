@@ -2,6 +2,7 @@
 import React from 'react';
 import MenuTable from '../table/table';
 import axios from 'axios'
+import './menu-manager.styles.css';
 
 
 class MenuManagerPage extends React.Component {
@@ -78,8 +79,9 @@ componentDidUpdate(){
     } else {
     optionalSpecials = null;
     }
-    return(<div>
-        <a href="/">Menu</a>
+    return(<div id="menu-manager">
+        <a href="/">back to menu</a>
+        <h1>MENU MANAGER</h1>
         <MenuTable key="mains" url="mains" category="Main Dishes" items={mains}></MenuTable>
         <MenuTable key="starters" url="starters" category="Starter Dishes" items={starters}></MenuTable>
         <MenuTable key="drinks" url="drinks" category="Drinks" items={drinks}></MenuTable>

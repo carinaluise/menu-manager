@@ -1,5 +1,6 @@
 import React from 'react';
 import './mains.styles.css';
+import Navigation from '../menu-navigation/menu-navigation';
 
 const Mains = ({menu}) => {
 
@@ -20,7 +21,7 @@ const Mains = ({menu}) => {
 
         </div>
         <div className="column-right">
-            <img className="foodpic-m" src="../../../foodpic-2b.jpg"></img>
+            <img className="foodpic" src="../../../foodpic-1b.jpg"></img>
         </div>
         
     </div>

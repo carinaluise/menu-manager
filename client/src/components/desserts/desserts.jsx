@@ -20,6 +20,7 @@ const Desserts = ({menu}) => {
 
         </div>
         <div className="column-right">
+        <img className="foodpic" src="../../../menu-desserts-b.jpg"></img>
 
         </div>
         

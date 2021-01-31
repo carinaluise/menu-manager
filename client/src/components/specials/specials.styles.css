@@ -1,32 +1,44 @@
+@media screen and (min-width : 1350px){
+    #specials .foodpic{
+        margin-left: 10%;
+        margin-top: 8%;
+        
+    }
+}
+
 #specials{
-    height: 100vh;
+    padding-bottom: 30vh;
     color: white;
 }
 
-.row-container{
+#specials .row-container{
  display: flex;
 }
 
-.column-left{
+#specials .column-left{
  flex: 50%;
- height: 90vh;
 }
 
-.column-right{
+#specials .column-right{
     flex: 50%;
-    height: 90vh;
+}
+
+#specials .foodpic{
+    width: 70%;
+    height: auto;
 }
 
 
 
-h4{
+#specials h4{
     font-size: 3rem;
     width: 40vw;
     border-bottom: solid pink 0.1rem;
     padding-bottom: 10px;
+  
 }
 
-h5{
+#specials h5{
     font-weight: bold;
 }
 
@@ -36,7 +48,7 @@ h5{
     font-weight: lighter;
 }
 
-.info-container{
+#specials .info-container{
     display: flex;
     width: 40vw;
     padding-top: 50px;
@@ -45,7 +57,7 @@ h5{
 }
 
 
-.price{
+#specials .price{
    padding-top: 5px;
    font-weight: lighter;
     

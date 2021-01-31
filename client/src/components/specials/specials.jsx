@@ -6,6 +6,7 @@ const Specials = ({menu}) => {
     return(<div id="specials">
     <div className="row-container">
         <div className="column-left">
+        <img className="foodpic" src="../../../foodpic-2b.jpg"></img>
 
         </div>
         <div className="column-right">

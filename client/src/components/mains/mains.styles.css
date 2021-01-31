@@ -1,32 +1,38 @@
+@media screen and (min-width : 1350px){
+    #mains .foodpic{
+        margin-left: 5%;
+        margin-top: 15%;
+    }
+}
+
+
+
 #mains{
-    height: 100vh;
+    padding-bottom: 30vh;
     color: white;
 }
 
 
-
-.row-container{
+#mains .row-container{
  display: flex;
 }
 
-.column-left{
+#mains .column-left{
  flex: 50%;
- height: 90vh;
+ 
 }
 
-.column-right{
+#mains .column-right{
     flex: 50%;
-    height: 90vh;
+ 
 }
-
-
 
 #mains h4{
     font-size: 3rem;
     width: 40vw;
     border-bottom: solid pink 0.1rem;
     padding-bottom: 10px;
-    margin-left: 10vw;
+    margin-left: 5vw;
 }
 
 h5{
@@ -42,30 +48,29 @@ h5{
 }
 
 #mains .info-container{
-    margin-left: 10vw;
+    margin-left: 5vw;
     display: flex;
     width: 40vw;
     padding-top: 50px;
     flex-wrap: wrap;
+    flex-direction: column;
 
 }
 
 #mains .description{
-    margin-left: 10vw;
+    margin-left: 5vw;
 }
 
 
-.price{
+#mains .price{
     
    padding-top: 5px;
    font-weight: lighter;
     
 }
 
-.foodpic-m{
+#mains .foodpic{
     width: 80%;
     height: auto;
-    margin-left: 5%;
-    margin-top: 20%;
 }
 

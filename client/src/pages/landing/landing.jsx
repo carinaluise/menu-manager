@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import './landing.styles.css';
 
 import MenuManagerPage from '../../components/menu-manager/menu-manager';
 
@@ -10,7 +11,7 @@ class LandingPage extends React.Component {
             email: "",
             password: "",
             userAuth: false,
-            error: false
+            error: false,
         }
     }
  
@@ -39,6 +40,10 @@ handleSubmit = (event)=> {
             .catch(err =>{
                 this.setState({error: true})
             })
+        this.setState({
+            email: "",
+            password: ""
+        })
     }
 
 render(){
@@ -51,14 +56,14 @@ render(){
      } else {
     
      return(
-        <div>
-        {error ? <h1> Problem with credientials please try again!</h1> : null}
+        <div id="landing">
+       
         <h1>Log in as Admin</h1>
-
+        {error ? <h3> Problem with credientials please try again!</h3> : null}
 
         <form onSubmit={this.handleSubmit}>
-        <input type="text" name="email" value={email} onChange={this.handleChange}></input>
-        <input type="password" name="password" value={password} onChange={this.handleChange}></input>
+        <input placeholder="email" type="text" name="email" value={email} onChange={this.handleChange}></input>
+        <input  placeholder="password" type="password" name="password" value={password} onChange={this.handleChange}></input>
         <button type="submit">Login</button>
         </form>
         </div>)

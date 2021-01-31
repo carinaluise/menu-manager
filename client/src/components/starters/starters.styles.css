@@ -1,39 +1,43 @@
+@media screen and (min-width : 1350px){
+    #starters .foodpic{
+        margin-left: 25%;
+        /* margin-top: 8%; */
+    }
+}
+
 #starters{
-    height: 100vh;
+    padding-bottom: 30vh;
     color: white;
 }
 
-.row-container{
+#starters .row-container{
  display: flex;
 }
 
-.column-left{
+#starters .column-left{
  flex: 50%;
- height: 90vh;
 }
 
-.column-right{
+#starters .column-right{
     flex: 50%;
-    height: 90vh;
 }
 
-.foodpic{
-    width: 80%;
+#starters .foodpic{
+    width: 60%;
     height: auto;
-    margin-left: 5%;
-    margin-top: 1%;
 }
 
 
 
-h4{
+#starters h4{
     font-size: 3rem;
     width: 40vw;
     border-bottom: solid pink 0.1rem;
     padding-bottom: 10px;
+  
 }
 
-h5{
+#starters h5{
     font-weight: bold;
 }
 
@@ -43,16 +47,17 @@ h5{
     font-weight: lighter;
 }
 
-.info-container{
+#starters .info-container{
     display: flex;
     width: 40vw;
     padding-top: 50px;
     flex-direction: column;
+    flex-wrap: wrap;
    
 }
 
 
-.price{
+#starters .price{
    padding-top: 5px;
    font-weight: lighter;
     

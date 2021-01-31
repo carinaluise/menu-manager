@@ -1,32 +1,38 @@
+@media screen and (min-width : 1350px){
+    #desserts .foodpic{
+        margin-left: 5%;
+        margin-top: 2%;
+    }
+}
+
+
+
 #desserts{
-    height: 100vh;
+    padding-bottom: 10vh;
     color: white;
 }
 
 
-
-.row-container{
+#desserts .row-container{
  display: flex;
 }
 
-.column-left{
+#desserts .column-left{
  flex: 50%;
- height: 90vh;
+ 
 }
 
-.column-right{
+#desserts .column-right{
     flex: 50%;
-    height: 90vh;
+ 
 }
-
-
 
 #desserts h4{
     font-size: 3rem;
     width: 40vw;
     border-bottom: solid pink 0.1rem;
     padding-bottom: 10px;
-    margin-left: 10vw;
+    margin-left: 5vw;
 }
 
 h5{
@@ -42,23 +48,29 @@ h5{
 }
 
 #desserts .info-container{
-    margin-left: 10vw;
+    margin-left: 5vw;
     display: flex;
     width: 40vw;
     padding-top: 50px;
     flex-wrap: wrap;
+    flex-direction: column;
 
 }
 
 #desserts .description{
-    margin-left: 10vw;
+    margin-left: 5vw;
 }
 
 
-.price{
+#desserts .price{
     
    padding-top: 5px;
    font-weight: lighter;
     
+}
+
+#desserts .foodpic{
+    width: 80%;
+    height: auto;
 }
 

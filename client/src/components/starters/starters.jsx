@@ -1,14 +1,13 @@
 import React from 'react';
 import './starters.styles.css'
-import Navigation from '../navigation/navigation';
+
 
 const Starters = ({menu}) => {
     console.log(menu)
     return(<div id="starters">
-    <Navigation></Navigation>
     <div className="row-container">
         <div className="column-left">
-        <img className="foodpic" src="../../../foodpic-1b.jpg"></img>
+        <img className="foodpic" src="../../../menu-specials-b.jpg"></img>
 
         </div>
         <div className="column-right">

@@ -1,3 +1,46 @@
-.custom-table{
-    table-layout:fixed
+#custom-table{
+    margin: 30px;
+    font-family: sans-serif;
+    table-layout:fixed;
+    width: 50%;
+    border: 1px solid black;
+
+}
+
+#custom-table th, td{
+    font-family: sans-serif;
+    border: 1px solid black;
+    padding: 5px;
+
+}
+
+
+
+#custom-table button, input{
+    font-family: sans-serif;
+    width: 5vw;
+    border-radius: none;
+}
+
+#custom-table-form{
+    padding-bottom: 50px;
+    margin-left: 30px;
+}
+
+#custom-table-form button{
+  
+    border-radius: 0;
+    margin: 0;
+    display: inline;
+    width: 13vw;
+    height: 3.6vh;
+} 
+
+.custom-table-input {
+    border-radius: 0;
+    width: 12.46vw;
+}
+
+.custom-table-button{
+    border-radius: 0;
 }

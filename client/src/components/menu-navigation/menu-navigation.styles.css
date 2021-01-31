@@ -2,11 +2,9 @@
     text-align: center;
     display: flex;
     justify-content: space-evenly;
-    padding: 5vh 0 10vh;
+    padding: 10vh 0 10vh;
     z-index: +10;
- 
-
-
+    background-color: black;
 }
 
 a {

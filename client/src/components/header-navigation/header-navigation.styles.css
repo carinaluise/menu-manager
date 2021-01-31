@@ -1,0 +1,19 @@
+.header-nav{
+    background-color: black;
+    display: flex;
+    height: 10vh;
+    padding-top: 10px;
+
+}
+
+.header-nav h3{
+    position: absolute;
+    left: 0.5%;
+    font-size: 3rem;
+    font-family: 'Julius Sans One', sans-serif;
+    
+}
+
+.admin-link{
+    padding: 1.5% 2% 0 90%;
+}

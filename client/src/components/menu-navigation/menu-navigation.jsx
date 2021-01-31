@@ -1,13 +1,12 @@
 import axios from 'axios';
 import React from 'react';
-import './navigation.styles.css'
-import Navbar from 'react-bootstrap/Navbar';
+import './menu-navigation.styles.css'
 
-class Navigation extends React.Component{
+
+class MenuNavigation extends React.Component{
     constructor(){
         super()
         this.state ={
-            sides: [],
             desserts: [],
             specials: []
         }
@@ -20,8 +19,8 @@ class Navigation extends React.Component{
             axios.get('/desserts'),
             axios.get('/specials')
         ])
-            .then(axios.spread((sides, desserts, specials) => {
-                this.setState({sides: sides.data, desserts: desserts.data, specials : specials.data})
+            .then(axios.spread((desserts, specials) => {
+                this.setState({desserts: desserts.data, specials : specials.data})
             }))
             .catch(err =>{
                 console.log(err)
@@ -34,8 +33,8 @@ class Navigation extends React.Component{
     
         <a href="/#starters">STARTERS</a>
         <a href="/#mains">MAINS</a>
+        <a href="/#sides">SIDES</a>
         <a href="/#drinks">DRINKS</a>
-        {this.state.sides.length > 0 ? <a href="/#sides">SIDES</a> : null}
         {this.state.desserts.length > 0 ? <a href="/#desserts">DESSERTS</a> : null}
         {this.state.specials.length > 0 ? <a href="/#specials">SPECIALS</a> : null}
 
@@ -43,4 +42,4 @@ class Navigation extends React.Component{
     }
 }
 
-export default Navigation;
+export default MenuNavigation;

@@ -1,5 +1,5 @@
 #drinks{
-    height: 100vh;
+    padding-bottom: 30vh;
     color: white;
 }
 
@@ -49,4 +49,5 @@ h5{
 .drink{
     padding-top: 5%;
     width: 10vw;
+    padding-right: 2%;
 }
