@@ -14,6 +14,15 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 
+if (process.env.NODE_ENV === 'production'){
+  app.use(express.static(path.join(__dirname, 'client/build')));
+
+  app.get('*', function(req,res){
+      res.sendFile(path.join(__dirname, 'client/build' , 'index.html'))
+  })
+}
+
+
 //CONNECT TO ROUTER
 const mainsRoute = require('./routes/mains');
 app.use('/mains', mainsRoute)
