@@ -89,9 +89,8 @@ componentDidUpdate(){
         {optionalDesserts}
         {optionalSpecials}
 
-    
-    {desserts.length === 0 ? <button onClick={this.handleClick} name="dessertsS"> + New Desserts Category</button> : null}
-    {specials.length ===0 ? <button onClick={this.handleClick} name="specialsS"> + New Specials Category</button> : null}
+    {desserts.length === 0 ? <button className="cat-button" onClick={this.handleClick} name="dessertsS"> + New Desserts Category</button> : null}
+    {specials.length ===0 ? <button className="cat-button" onClick={this.handleClick} name="specialsS"> + New Specials Category</button> : null}
     </div>)
     }
 }
