@@ -10,8 +10,8 @@ function App() {
   return (
     <div className="App">
       <Switch>
-      <Route exact path='/' component={LandingPage}></Route>
-      <Route exact path='/menu' component={MenuPage}></Route>
+      <Route exact path='/' component={MenuPage}></Route>
+      <Route exact path='/menu-manager' component={LandingPage}></Route>
       {/* <Route exact path='/menu-manager' component={MenuManagerPage}></Route> */}
       </Switch>
     </div>

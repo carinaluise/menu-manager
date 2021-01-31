@@ -10,7 +10,6 @@ class MenuTable extends React.Component{
             name: "",
             price: 0,
             description: "",
-            update: false
         }
 
        
@@ -59,6 +58,11 @@ class MenuTable extends React.Component{
              axios.post(`/${this.props.url}`, data)
                 .then(res => {
                     this.setState({update: true})
+                    this.setState({
+                        name: "",
+                        price: "",
+                        description: ""
+                    })
                 })
                 .catch(err =>{
                     console.log(err)
@@ -75,7 +79,6 @@ class MenuTable extends React.Component{
     return(
             <div>
                 <table className="table custom-table">
-                {update ? <tr>Updated!</tr> : null}
                     <thead>
                         <tr>
                             <th>{category.toUpperCase()}</th>

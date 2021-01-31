@@ -79,7 +79,7 @@ componentDidUpdate(){
     optionalSpecials = null;
     }
     return(<div>
-        <a href="/menu">Menu</a>
+        <a href="/">Menu</a>
         <MenuTable key="mains" url="mains" category="Main Dishes" items={mains}></MenuTable>
         <MenuTable key="starters" url="starters" category="Starter Dishes" items={starters}></MenuTable>
         <MenuTable key="drinks" url="drinks" category="Drinks" items={drinks}></MenuTable>
@@ -88,9 +88,8 @@ componentDidUpdate(){
         {optionalSpecials}
 
     
-    <button onClick={this.handleClick} name="dessertsS"> + New Desserts Category</button>
-
-    <button onClick={this.handleClick} name="specialsS"> + New Specials Category</button>
+    {desserts.length === 0 ? <button onClick={this.handleClick} name="dessertsS"> + New Desserts Category</button> : null}
+    {specials.length ===0 ? <button onClick={this.handleClick} name="specialsS"> + New Specials Category</button> : null}
     </div>)
     }
 }
