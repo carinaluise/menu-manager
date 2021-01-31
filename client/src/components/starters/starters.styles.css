@@ -1,12 +1,39 @@
 @media screen and (min-width : 1350px){
+    #starters{
+        padding-top: 20vh;
+    }
+    
+    
     #starters .foodpic{
         margin-left: 25%;
         /* margin-top: 8%; */
     }
+    #starters h4{
+    
+        width: 40vw;
+     
+      
+    }
+
+}
+
+@media screen and (max-width: 1349px){
+    #starters h4{
+
+        width: 90vw;
+     
+      
+    }
+    #starters .foodpic{
+        display: none;
+    
+    }
 }
 
 #starters{
-    padding-bottom: 30vh;
+    /* padding-top: 20vh; */
+    /* padding-top: 20vh; */
+    /* padding-bottom: 30vh; */
     color: white;
 }
 
@@ -31,7 +58,7 @@
 
 #starters h4{
     font-size: 3rem;
-    width: 40vw;
+    /* width: 40vw; */
     border-bottom: solid pink 0.1rem;
     padding-bottom: 10px;
   

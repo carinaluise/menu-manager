@@ -1,5 +1,50 @@
+@media screen and (min-width : 1350px){
+    #sides .flex-container{
+        width: 40vw;
+    }
+
+    .side{
+        width: 10vw;
+    }
+    #sides .flex-container{
+     
+        margin-left: 30vw;
+       
+        
+    }
+
+}
+
+@media screen and (max-width: 1349px){
+    #sides .flex-container{
+        width: 100vw;
+    }
+
+    .side{
+        width: 20vw;
+    }
+    #sides .flex-container{
+     
+        margin-left: 15vw;
+       
+        
+    }
+    #sides h4{
+      text-align: center;
+    }
+
+
+}
+
+
+
+
+
+
+
 #sides{
-    padding-bottom: 30vh;
+    /* padding-bottom: 30vh; */
+    padding-top: 25vh;
     color: white;
 }
 
@@ -10,6 +55,7 @@
     border-bottom: solid pink 0.1rem;
     padding-bottom: 10px;
     margin-left: 30vw;
+    /* margin-left: 30vw; */
 }
 
 h5{
@@ -42,13 +88,13 @@ h5{
 #sides .flex-container{
     display: flex;
     flex-wrap: wrap;
-    margin-left: 30vw;
-    width: 40vw;
+    /* margin-left: 30vw; */
+   
     
 }
 .side{
     padding-top: 5%;
     padding-right: 2%;
-    width: 10vw;
+    
 }
 

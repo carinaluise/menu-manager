@@ -15,7 +15,6 @@ class MenuNavigation extends React.Component{
     componentDidMount(){
         
         axios.all([
-            axios.get('/sides'),
             axios.get('/desserts'),
             axios.get('/specials')
         ])
@@ -35,8 +34,8 @@ class MenuNavigation extends React.Component{
         <a href="/#mains">MAINS</a>
         <a href="/#sides">SIDES</a>
         <a href="/#drinks">DRINKS</a>
-        {this.state.desserts.length > 0 ? <a href="/#desserts">DESSERTS</a> : null}
         {this.state.specials.length > 0 ? <a href="/#specials">SPECIALS</a> : null}
+        {this.state.desserts.length > 0 ? <a href="/#desserts">DESSERTS</a> : null}
 
     </div>)
     }

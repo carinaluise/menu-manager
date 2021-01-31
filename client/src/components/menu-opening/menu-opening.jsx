@@ -6,7 +6,7 @@ const MenuOpening = () => {
     return(<div id="menu-opening">
             <img className="title-image" src="../../../menu-open-larger.jpg"></img>
       
-                {/* <h1 className="title"> Menu</h1>          */}
+                <h1 className="title"> Menu</h1>         
 
     </div>)
 }

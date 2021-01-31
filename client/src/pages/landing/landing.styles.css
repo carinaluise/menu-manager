@@ -8,7 +8,7 @@
     padding-top: 20%;
 }
 
-#landing h1 , h3{
+#landing h1 , h3 , a{
     text-align: center;
     color: white;
 }
@@ -47,3 +47,10 @@
      border: solid black 1px;
 }
 
+.landing-link{
+    padding-top: 50px;
+    display: block;
+    margin: 0 auto;
+    text-decoration: underline white 1px;
+
+}

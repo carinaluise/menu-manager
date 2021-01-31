@@ -66,6 +66,8 @@ render(){
         <input  placeholder="password" type="password" name="password" value={password} onChange={this.handleChange}></input>
         <button type="submit">Login</button>
         </form>
+
+         <a className="landing-link" href="/">Or return to menu</a>
         </div>)
         } 
     }  

@@ -16,6 +16,8 @@ const Drinks = ({menu}) => {
             })}
             </div>
 
+            {/* <img className="drinks-img" src="../../../menu-drinks-b.jpg"></img> */}
+
         </div>
    
 
